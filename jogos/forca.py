@@ -24,10 +24,9 @@ def mensagem_inicial():
 def escolhe_palavra():
     print("**************************************")
     print("Defina o tipo de palavra para o jogo!")
-    print("(1) Frutas | (2) Nomes ")
+    print("(1) Frutas | (2) Nomes | (3) Aleatoria")
     print("**************************************")
-    print("Caso não escolha o tipo de palavra,\n\
-        o tipo será o padrão Palavras.")
+    print("Aleatoria contém todo tipo de palavra")
     print("**************************************\n")
     resp = int(input("Qual tipo de palavra você quer ?"))
 
