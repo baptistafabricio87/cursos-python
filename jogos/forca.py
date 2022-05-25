@@ -1,34 +1,34 @@
-
-
 def jogar():
-    palavra_secreta = 'banana'
-    letras_certas = ['_', '_', '_', '_', '_', '_']
-    letras_faltando = str(letras_certas.count('_'))
+    palavra_secreta = 'banana'.upper()
+    letras_certas = ['_' for letra in palavra_secreta]
+    
     enforcou = False
     acertou = False
+    erros = 0
 
     print(letras_certas)
-    print(f'Ainda falta {letras_faltando} letras.')
+    
     while not enforcou and not acertou:
         chute = input('Qual letra ?  ')
-        chute = chute.strip()
-        index = 0
-        for letra in palavra_secreta:
-            if chute.upper() == letra.upper():
-                letras_certas[index] = letra
-            index += 1
+        chute = chute.strip().upper()
 
+        if chute in palavra_secreta:
+            index = 0
+            for letra in palavra_secreta:
+                if chute == letra:
+                    letras_certas[index] = letra
+                index += 1
+        else:
+            erros += 1
+        
+        enforcou = erros == 6
+        acertou = '_' not in letras_certas
         print(letras_certas)
 
-        letras_faltando = str(letras_certas.count('_'))
-        if letras_faltando == '0':
-            acertou = True
-            print('Parabens! Se salvou!!!')
-        elif len(letras_faltando) < len(letras_certas):
-            print(f'Ainda falta {letras_faltando} letras.')
-        else:
-            enforcou = True
-            print('Enforcou! :p')
+    if acertou:
+        print('Parabéns! Você acertou a palavra secreta', palavra_secreta)
+    else:
+        print('\nEnforcou! Fim de Jogo!')
 
 if __name__ == '__main__':
     jogar()
