@@ -1,17 +1,21 @@
+from conta import Conta
+from pessoa import Pessoa
+conta1 = Conta(1, "Fabricio", 500.0)
 
+print("Extrato ")
+conta1.extrato()
 
-def cria_conta(numero, titular, saldo, limite):
-    conta = {"numero": numero, "titular": titular, "saldo": saldo, "limite": limite}
-    return conta
+print("\nSaque ")
+conta1.saca(40.0)
+print("Extrato ")
+conta1.extrato()
 
+print("\nDeposito")
+conta1.deposito(50.0)
+print("Extrato ")
+conta1.extrato()
 
-def deposito(conta, valor):
-    conta["saldo"] += valor
+pessoa1 = Pessoa("Fabricio", "Castro")
 
-
-def saca(conta, valor):
-    conta["saldo"] -= valor
-
-
-def extrato(conta):
-    print(f'Saldo: {conta["saldo"]}')
+print("Objeto Pessoa")
+pessoa1.exibe_nome()
