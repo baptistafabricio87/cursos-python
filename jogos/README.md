@@ -1,6 +1,10 @@
-# Projeto de Jogos no curso Python 3
+# Projeto de Jogos do curso Python 3
 
 ## Jogos
-
-* ### Adivinhação
-* ### Forca
+---
+> [Comece por aqui](/jogos/jogos.py)
+---
+> [Adivinhação](/jogos/adivinhacao.py)
+---
+> [Forca](/jogos/forca.py)
+---
