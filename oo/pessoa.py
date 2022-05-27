@@ -7,6 +7,4 @@ class Pessoa:
         self.sobrenome = sobrenome
 
     def exibe_nome(self):
-        print("-> {0} {1} ".format(self.nome, self.sobrenome))
-
-    
+        print("-> {} {} ".format(self.nome, self.sobrenome))

@@ -1,7 +1,16 @@
 from conta import Conta
 from pessoa import Pessoa
-conta1 = Conta(1, "Fabricio", 500.0)
+from datas import Data
 
+
+conta1 = Conta(1, "Fabricio", 500.0)
+conta2 = Conta(2, "Tatiana", 400.0)
+
+# ENCAPSULAMENTO
+conta1.transfere(conta2, 50.0)
+conta2.extrato()
+
+# METODOS
 print("Extrato ")
 conta1.extrato()
 
@@ -15,7 +24,12 @@ conta1.deposito(50.0)
 print("Extrato ")
 conta1.extrato()
 
+# EXERCICIO 1
 pessoa1 = Pessoa("Fabricio", "Castro")
-
-print("Objeto Pessoa")
+print("\nObjeto Pessoa")
 pessoa1.exibe_nome()
+
+# EXERCICIO 2
+print("\nExercicio DATAS")
+d = Data(27, 5, 2022)
+d.dt_formatada()
