@@ -6,6 +6,12 @@ from datas import Data
 conta1 = Conta(1, "Fabricio", 500.0)
 conta2 = Conta(2, "Tatiana", 400.0)
 
+# EXERCICIO - PROPRIEDADES
+print("\nMostra limite: ", conta1.limite)
+x = float(input("Informe novo limite: "))
+conta1.limite = x
+print("Novo limite é: ", conta1.limite)
+
 # ENCAPSULAMENTO
 conta1.transfere(conta2, 50.0)
 conta2.extrato()

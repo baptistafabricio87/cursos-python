@@ -3,14 +3,14 @@
 class Conta:
 
     def __init__(self, numero, titular, saldo, limite = 1000.0):
-        print("Contruindo objeto ... {}".format(self))
+        print("Objeto construido ... {}".format(self))
         self.__numero = numero
         self.__titular = titular
         self.__saldo = saldo
         self.__limite = limite
 
     def extrato(self):
-        print("Saldo: {} - Titular: {} ".format(self.__saldo, self.__titular))
+        print("\nSaldo: {} - Titular: {} ".format(self.__saldo, self.__titular))
 
 
     def deposito(self, valor):
@@ -29,18 +29,18 @@ class Conta:
     def get_numero(self):
         return self.__numero
 
-
-    def get_titular(self):
+    @property
+    def titular(self):
         return self.__titular
 
-
-    def get_saldo(self):
+    @property
+    def saldo(self):
         return self.__saldo
     
-
-    def get_limite(self):
+    @property
+    def limite(self):
         return self.__limite
 
-    
-    def set_limite(self, limite):
+    @limite.setter
+    def limite(self, limite):
         self.__limite = limite
