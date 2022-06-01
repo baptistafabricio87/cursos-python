@@ -1,22 +1,25 @@
-from modelo import Filme, Serie
+from modelo import Filme, Serie, Playlist
 
-filme = Filme('vingadores - guerra inifita', 2018, 160)
-serie = Serie('atlanta - de glover', 2018, 2)
+avenger = Filme('vingadores - guerra inifita', 2018, 160)
+tmep = Filme('todo mundo em panico - guerra inifita', 1999, 90)
+atlanta = Serie('atlanta - de glover', 2018, 4)
+demolidor = Serie('demolidor', 2016, 8)
+avenger.dar_likes()
+avenger.dar_likes()
+avenger.dar_likes()
+tmep.dar_likes()
+tmep.dar_likes()
+atlanta.dar_likes()
+demolidor.dar_likes()
+demolidor.dar_likes()
+demolidor.dar_likes()
+demolidor.dar_likes()
 
-filmes_series = [filme, serie]
+filmes_series = [atlanta, tmep, avenger, demolidor]
+playlist_fim_de_semana = Playlist('fim de semana', filmes_series)
 
-for programa in filmes_series:
-    programa.imprime()
+print('Tamanho da Playlist: ', len(playlist_fim_de_semana))
+for programa in playlist_fim_de_semana:
+    print(programa)
 
-
-
-
-
-# filme.dar_likes()
-# print(f'Nome: {filme.nome} - Likes: {filme.likes}')
-
-# serie.dar_likes()
-# print(f'Nome: {serie.nome} - Likes: {serie.likes}')
-
-# atlanta.dar_likes()
-# print(f'Nome: {atlanta.nome} - Likes: {atlanta.likes}')
+print('Tá ou não Tá? ', demolidor in  playlist_fim_de_semana)

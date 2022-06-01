@@ -24,8 +24,8 @@ class Programa:
     def dar_likes(self):
         self._likes += 1
 
-    def imprime(self):
-        print(f'{self.nome} - {self.ano} - {self.likes} Likes')
+    def __str__(self):
+        return f'{self.nome} - {self.ano} - {self.likes} Likes'
 
 
 class Filme(Programa):
@@ -38,8 +38,8 @@ class Filme(Programa):
     def duracao(self):
         return self._duracao
 
-    def imprime(self):
-        print(f'{self.nome} - {self.ano} - {self.duracao} min - {self.likes} Likes')
+    def __str__(self):
+        return f'{self.nome} - {self.ano} - {self.duracao} min - {self.likes} Likes'
 
 class Serie(Programa):
 
@@ -51,5 +51,12 @@ class Serie(Programa):
     def temporadas(self):
         return self._temporadas
 
-    def imprime(self):
-        print(f'{self.nome} - {self.ano} - {self.temporadas} temp - {self.likes} Likes')
+    def __str__(self):
+        return f'{self.nome} - {self.ano} - {self.temporadas} temp - {self.likes} Likes'
+
+
+class Playlist(list):
+
+    def __init__(self, nome, programas):
+        super().__init__(programas)
+        self.nome = nome
