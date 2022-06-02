@@ -18,8 +18,10 @@ demolidor.dar_likes()
 filmes_series = [atlanta, tmep, avenger, demolidor]
 playlist_fim_de_semana = Playlist('fim de semana', filmes_series)
 
-print('Tamanho da Playlist: ', len(playlist_fim_de_semana))
+print('Tamanho da Playlist: ', len(playlist_fim_de_semana.listagem))
 for programa in playlist_fim_de_semana:
     print(programa)
 
-print('Tá ou não Tá? ', demolidor in  playlist_fim_de_semana)
+print(f'Tem {demolidor in playlist_fim_de_semana} na lista ? ')
+
+print(playlist_fim_de_semana[3])
